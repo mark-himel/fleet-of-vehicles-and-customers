@@ -1,0 +1,27 @@
+<h1>Vehicles List</h1>
+<div style="float: left; width: 50%; height: 50%;">
+  <%= form_tag import_vehicles_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import" %>
+  <% end %>
+</div>
+<div style="float: right; width: 50%; height: 50%;">
+  <%= button_to 'Export customers count',
+                export_vehicles_path(format: :csv),
+                method: :get, params: { export_type: 'customer' } %>
+  <br>
+  <%= button_to 'Export odometer reading',
+                export_vehicles_path(format: :csv),
+                method: :get, params: { export_type: 'odometer_reading' } %>
+</div>
+<br>
+<br>
+<%= form_tag vehicles_path, method: :get, id: "vehicles_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag 'Search', :name => nil %>
+  </p>
+  <div style="clear: both; margin-top: 5%; margin-left: 5%" id="vehicles-table">
+    <%= render 'vehicles' %>
+  </div>
+<% end %>

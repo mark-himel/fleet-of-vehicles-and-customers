@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <th>Owner Name</th>
+    <th>Nationality</th>
+    <th>Email</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Chassis Number</th>
+    <th>Color</th>
+    <th>Registration Date</th>
+    <th>Odometer Reading</th>
+  </tr>
+  <% @vehicles.all.each do |vehicle| %>
+      <tr>
+        <td><%= vehicle.user.name %></td>
+        <td><%= vehicle.user.nationality %></td>
+        <td><%= vehicle.user.email %></td>
+        <td><%= vehicle.model %></td>
+        <td><%= vehicle.year %></td>
+        <td><%= vehicle.chassis_number %></td>
+        <td><%= vehicle.color %></td>
+        <td><%= vehicle.registration_date %></td>
+        <td><%= vehicle.odometer_reading %></td>
+      </tr>
+  <% end %>
+</table>

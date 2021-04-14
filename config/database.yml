@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: fleet-of-vehicles-and-customers_development
+
+test:
+  <<: *default
+  database: fleet-of-vehicles-and-customers_test
+
+production:
+  <<: *default
+  database: fleet-of-vehicles-and-customers_production
+  username: fleet-of-vehicles-and-customers
+  password: <%= ENV['FLEET-OF-VEHICLES-AND-CUSTOMERS_DATABASE_PASSWORD'] %>
