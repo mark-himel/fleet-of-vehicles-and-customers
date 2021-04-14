@@ -19,3 +19,10 @@ Gemma,Kirke,gemma@kirke.me,INFINITI JX35,2011,444444444,Black,02/01/2019,12000
 Jeni,Mohan,jeni@mohan.me,Audi A4,2018,555555555,White,05/04/2020,123000
 Joseph,Sasank,joseph@sasank.me,Ford Focus,2020,888888888,Black,02/11/2019,34000
 ```
+
+## Installation
+
+* Install the dependencies with `bundle install`
+* Create the database with `rake db:create`
+* Initialize the database `rake db:schema:load`
+* Simply start the server `rails s -p 3000` and start to play around
