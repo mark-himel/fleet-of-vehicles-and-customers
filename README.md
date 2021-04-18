@@ -26,3 +26,8 @@ Joseph,Sasank,joseph@sasank.me,Ford Focus,2020,888888888,Black,02/11/2019,34000
 * Create the database with `rake db:create`
 * Initialize the database `rake db:schema:load`
 * Simply start the server `rails s -p 3000` and start to play around
+
+## RSpec testing
+
+* Run `rspec` in the terminal to run all spec files
+* All spec files are located in the `/spec` directory
